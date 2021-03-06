@@ -5,6 +5,10 @@ const ChatSchema = mongoose.Schema({
         type: String,
         required: true
     }],
+    name: {
+        type: String,
+        required: false
+    },
     dm:{
         type: Boolean,
         default: false
@@ -16,7 +20,7 @@ const ChatSchema = mongoose.Schema({
     dateUpdated: {
         type: Date,
         default: Date.now
-    }
+    },
 });
 
 module.exports = mongoose.model('Chats', ChatSchema);
